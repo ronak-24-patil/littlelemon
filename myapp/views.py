@@ -3,6 +3,7 @@ from .forms import CustomerForm
 from .forms import InputForm
 from django.shortcuts import render, redirect
 from .forms import LogForm
+from .models import Menu
 
 def customer_form(request):
     if request.method == 'POST':
@@ -53,3 +54,6 @@ def menu(request):
     }
     return render(request, 'menu.html', new_menu)
 
+def menu_card(request):
+    new_menu = Menu.objects.all()  # Fetch all menu items from the database
+    return render(request, 'menu_card.html', {'menu': new_menu})

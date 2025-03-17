@@ -3,6 +3,8 @@ from . import views
 from .views import log_view
 from .views import about
 from .views import menu
+from .views import menu_card
+
 
 urlpatterns = [
     path('form/', views.customer_form, name='customer_form'),
@@ -10,6 +12,9 @@ urlpatterns = [
     path('', log_view, name='log_form'),
     path('about/', about, name='about'),
     path('menu/', menu, name='menu'),
-]
+    path('menu_card/', menu_card, name='menu_card'),
+] 
+
+
 
 
