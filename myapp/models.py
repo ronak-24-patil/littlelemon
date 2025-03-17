@@ -20,3 +20,11 @@ class Menu(models.Model):
 
     def __str__(self):
         return self.menu_item
+
+class Customer(models.Model):
+    name = models.CharField(max_length=100)
+    reservation_day = models.CharField(max_length=20)
+    seats = models.IntegerField()
+
+    def __str__(self):
+        return self.name
