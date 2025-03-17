@@ -35,3 +35,13 @@ class Logger(models.Model):
 
     def __str__(self):
         return self.name
+
+class Reservation(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=15)
+    time = models.DateTimeField()
+    guest_count = models.IntegerField()
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name  # Display name in the admin panel
