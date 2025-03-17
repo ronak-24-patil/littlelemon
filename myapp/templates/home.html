@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Log Form</title>
+    <style>
+        form {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Little Lemon Employee Log</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

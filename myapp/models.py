@@ -28,3 +28,10 @@ class Customer(models.Model):
 
     def __str__(self):
         return self.name
+
+class Logger(models.Model):
+    name = models.CharField(max_length=100)
+    time = models.TimeField()
+
+    def __str__(self):
+        return self.name
