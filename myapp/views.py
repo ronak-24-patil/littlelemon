@@ -36,3 +36,8 @@ def log_view(request):
         form = LogForm()
 
     return render(request, 'log_form.html', {'form': form})
+
+def about(request):
+    about_content = {"about": "Welcome to Little Lemon! We serve fresh and delicious food every day."}
+    return render(request, 'about.html', about_content)
+
