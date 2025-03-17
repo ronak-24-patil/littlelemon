@@ -41,3 +41,15 @@ def about(request):
     about_content = {"about": "Welcome to Little Lemon! We serve fresh and delicious food every day."}
     return render(request, 'about.html', about_content)
 
+
+def menu(request):
+    new_menu = {
+        "mains": [
+            {"name": "Greek Salad", "price": "$10"},
+            {"name": "Pasta Primavera", "price": "$12"},
+            {"name": "Margherita Pizza", "price": "$15"},
+            {"name": "Grilled Salmon", "price": "$18"},
+        ]
+    }
+    return render(request, 'menu.html', new_menu)
+
