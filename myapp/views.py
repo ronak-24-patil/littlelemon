@@ -57,3 +57,16 @@ def menu(request):
 def menu_card(request):
     new_menu = Menu.objects.all()  # Fetch all menu items from the database
     return render(request, 'menu_card.html', {'menu': new_menu})
+
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'myapp/home.html')
+
+def about(request):
+    return render(request, 'myapp/about.html')
+
+def menu(request):
+    return render(request, 'myapp/menu.html')
+
+
